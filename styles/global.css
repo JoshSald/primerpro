@@ -133,7 +133,7 @@ footer {
 button,
 .btn {
   display: inline-block;
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-md);
   font-family: var(--font-heading);
   font-size: var(--fs-body);
   font-weight: 600;
@@ -152,12 +152,17 @@ button,
   background-color: var(--color-pine);
 }
 
+@media (min-width: 768px) {
+  .btn {
+    padding: var(--space-md) var(--space-lg);
+  }
+}
+
 /* ==============================
    Cards
    ============================== */
 
 .card {
-  width: 25rem;
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
@@ -167,6 +172,12 @@ button,
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 25rem;
+  }
 }
 
 /* ==============================
