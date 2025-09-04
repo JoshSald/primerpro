@@ -111,10 +111,15 @@ nav ul li::before {
 }
 .video--container {
   margin: o auto;
-  width: 762.15px;
+  width: 100%;
 }
 .video--container video {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .video--container {
+    width: 60%;
+  }
 }
 /* FEATURES SECTION */
 
