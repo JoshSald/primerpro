@@ -33,12 +33,13 @@ nav .logo {
   margin-left: auto;
   color: #34d399;
   font-size: 1.2rem;
+}
 /* HERO SECTION */
 #hero {
   display: flex;
   flex-direction: column; /* stack items top to bottom */
-  align-items: center;    /* center them horizontally */
-  text-align: center;     /* center text */
+  align-items: center; /* center them horizontally */
+  text-align: center; /* center text */
   padding: 3rem 8%;
   background-color: #165a46;
 }
@@ -80,17 +81,55 @@ nav .logo {
   width: 350px;
   max-width: 100%;
   border-radius: 10px;
-  margin-top: 2rem; 
+  margin-top: 2rem;
+}
 /* TRUST BANNER SECTION */
+#trust-banner {
+  padding: 2rem 8%;
+  background-color: #165a46;
+  text-align: center;
+}
+
+#trust-banner h2 {
+  margin-bottom: 1.5rem;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo-item {
+  background-color: #113a2b;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 120px;
+}
+
+.logo-item img {
+  max-width: 100%;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.logo-item p {
+  font-size: 0.9rem;
+  color: #b7d7ca;
+}
+
 /* VIDEO SECTION */
 video h2 {
   text-align: center;
 }
 .video-container {
-  margin: o  auto;
+  margin: o auto;
   width: 762.15px;
 }
-.video-container video{
+.video-container video {
   width: 100%;
 }
 /* FEATURES SECTION */
