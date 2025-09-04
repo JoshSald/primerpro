@@ -3,6 +3,16 @@
 /* HERO SECTION */
 /* TRUST BANNER SECTION */
 /* VIDEO SECTION */
+video h2 {
+  text-align: center;
+}
+.video-container {
+  margin: o  auto;
+  width: 762.15px;
+}
+.video-container video{
+  width: 100%;
+}
 /* FEATURES SECTION */
 /* WHY US SECTION */
 #why-us .grid-container {
