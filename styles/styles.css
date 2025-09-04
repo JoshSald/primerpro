@@ -33,6 +33,7 @@ nav .logo {
   margin-left: auto;
   color: #34d399;
   font-size: 1.2rem;
+}
 /* HERO SECTION */
 #hero {
   display: flex;
@@ -81,6 +82,7 @@ nav .logo {
   max-width: 100%;
   border-radius: 10px;
   margin-top: 2rem; 
+}
 /* TRUST BANNER SECTION */
 #trust-banner {
   padding: 2rem 8%;
