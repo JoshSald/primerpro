@@ -124,7 +124,7 @@ footer {
 button,
 .btn {
   display: inline-block;
-  padding: var(--space-md) var(--space-md);
+  padding: var(--space-md) var(--space-lg);
   font-family: var(--font-heading);
   font-size: var(--fs-body);
   font-weight: 600;
