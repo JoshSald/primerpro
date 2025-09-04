@@ -242,3 +242,9 @@ ul li::before {
   content: url("../assets/img/icons/pine.svg");
   margin-right: var(--space-xs);
 }
+
+@media (min-width: 768px) {
+  .desktop--hide {
+    display: none;
+  }
+}
