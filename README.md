@@ -1,4 +1,4 @@
-# primerpro
+# Evertee🌲
 
 A modern, responsive website for an apparel brand focused on high-quality, sustainable t-shirts.  
 Built with HTML, CSS.
