@@ -41,7 +41,7 @@ nav .logo {
   align-items: center;    /* center them horizontally */
   text-align: center;     /* center text */
   padding: 3rem 8%;
-  background-color: #165a46;
+  background-color: #f5f2e7;
 }
 
 #hero .badge {
@@ -86,7 +86,7 @@ nav .logo {
 /* TRUST BANNER SECTION */
 #trust-banner {
   padding: 2rem 8%;
-  background-color: #165a46;
+  background-color: #f5f2e7;
   text-align: center;
 }
 
