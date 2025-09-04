@@ -5,16 +5,13 @@
 /* VIDEO SECTION */
 /* FEATURES SECTION */
 /* WHY US SECTION */
-#why-us {
-  padding: 10% 15%;
-}
 #why-us .grid-container {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 #why-us h2 {
   font-size: 3rem;
-  margin-bottom: 9rem;
+  margin-bottom: 7rem;
   text-align: center;
 }
 
@@ -31,8 +28,14 @@
   text-align: center;
 }
 #why-us img {
-  width: 60%;
+  max-width: 60%;
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  #why-us img {
+    max-width: 35%;
+  }
 }
 /* PRICING SECTION */
 /* FOOTER */
