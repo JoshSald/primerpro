@@ -174,12 +174,6 @@ button,
   justify-content: space-around;
 }
 
-@media (min-width: 768px) {
-  .card {
-    width: 30%;
-  }
-}
-
 /* ==============================
    Inputs
    ============================== */

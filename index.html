@@ -66,109 +66,107 @@
     <main>
       <!-- Oualid -->
       <section id="hero">
-        <div class="badge">#1 Trending T-Shirt Brand</div>
-        <h2>Wear Your Style. Stand Out Everyday.</h2>
-        <p>
-          Premium quality cotton T-shirts, sustainably made for comfort and
-          style.
-        </p>
-        <img
-          src="https://media.istockphoto.com/id/1170635789/de/foto/nahaufnahme-von-bunten-t-shirts-auf-kleiderb%C3%BCgeln-kleidung-hintergrund.jpg?s=1024x1024&w=is&k=20&c=-GGlBqOPOEXp4vPXrrf_Jlsj8MAY2iu2J1j0dmTilAU="
-          alt="Product preview"
-          class="hero-img"
-        />
-        <button class="btn btn-primary">Shop Now</button>
-      </section>
-
-      <section id="featured">
-        <h3>Limited Edition Drop</h3>
-        <p>
-          Get our exclusive design <br />
-          only available this month!
-        </p>
-        <img
-          src="https://media.istockphoto.com/id/1496823131/de/foto/hemd-mock-up-schablone-mit-leerem-kragen-vorder-und-r%C3%BCckansicht-schlichtes-schwarzes-t-shirt.jpg?s=1024x1024&w=is&k=20&c=KRF5LcRYeFi10XHXEWDPNdefLx-6tsR1CIRosAWPzn8="
-          alt="Demo preview"
-          class="demo-img"
-        />
-        <button class="btn btn-primary">Buy Now</button>
+        <div class="card--container">
+          <div class="badge">#1 Trending T-Shirt Brand</div>
+          <h2>
+            Wear Your Style. <br />Stand Out.<br />
+            Everyday.
+          </h2>
+          <p>
+            Premium quality cotton T-shirts, sustainably made for comfort and
+            style.
+          </p>
+          <button class="btn btn-primary">Shop Now</button>
+        </div>
       </section>
       <!-- Oualid -->
-      <section id="trust-banner">
-        <h2>Trusted by companies like</h2>
+      <section id="trust-banner" class="bg--dark">
+        <h2 class="headline--light">Trusted by companies like</h2>
         <div class="logos">
           <div class="logo-item">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hanes-logo.svg/1200px-Hanes-logo.svg.png"
-              alt="Hanes"
-            />
-            <p>Hanes</p>
+            <img src="./assets/img/brands/greenpeace.svg" alt="greenpeace" />
           </div>
           <div class="logo-item">
             <img
-              src="https://vtlogo.com/wp-content/uploads/2021/01/bella-canvas-vector-logo.png"
-              alt="Bella + Canvas"
+              src="./assets/img/brands/rainforest-action-network.svg"
+              alt="Rainforest Action Network"
             />
-            <p>Bella + Canvas</p>
           </div>
           <div class="logo-item">
             <img
-              src="https://images.seeklogo.com/logo-png/35/2/patagonia-logo-png_seeklogo-351351.png"
-              alt="Patagonia"
+              src="./assets/img/brands/sea-shepherd.svg"
+              alt="Sea Shepherd"
             />
-            <p>Patagonia</p>
           </div>
           <div class="logo-item">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Sunspel_logo.png"
-              alt="Sunspel"
+              src="./assets/img/brands/thenorthface.svg"
+              alt="The North Face"
             />
-            <p>Sunspel</p>
           </div>
           <div class="logo-item">
-            <img
-              src="https://getlogovector.com/wp-content/uploads/2019/11/comfort-colors-logo-vector.png"
-              alt="Comfort Colors"
-            />
-            <p>Comfort Colors</p>
+            <img src="./assets/img/brands/wwf.svg" alt="WWF" />
           </div>
         </div>
       </section>
       <!-- Lukasz -->
       <section id="video">
-        <h1 class="video-title">Check out our video:</h1>
-        <video width="320" height="240" autoplay loop muted>
-          <source src="assets/video/video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <h2 class="video-title">Check out our video:</h2>
+        <div class="video--container">
+          <video autoplay loop muted>
+            <source src="assets/video/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </section>
-      <section id="features">
+      <section id="features" class="bg--dark">
         <div class="container">
-          <h1 class="main-title">Awesome features of our product</h1>
+          <h1 class="main-title headline--light">
+            Awesome features of our product
+          </h1>
           <p class="subtitle"></p>
 
-          <div class="features-container">
+          <div class="flex-container body">
             <div class="feature-item">
-              <div class="feature-icon"></div>
-              <h3 class="feature-title">Unique design</h3>
-              <p class="feature-description">
+              <div class="feature-icon">
+                <img
+                  src="./assets/img/graphics/unique-design.png"
+                  alt="Unique Design"
+                />
+              </div>
+              <h3 class="feature-title headline--light">Unique design</h3>
+              <p class="feature-description body--light">
                 You can choose from thousands of designs in our database or send
                 us your own design.
               </p>
             </div>
 
             <div class="feature-item">
-              <div class="feature-icon"></div>
-              <h3 class="feature-title">lightning-fast turnaround time</h3>
-              <p class="feature-description">
+              <div class="feature-icon">
+                <img
+                  src="./assets/img/graphics/fast.png"
+                  alt="Lightning fast turnaround"
+                />
+              </div>
+              <h3 class="feature-title headline--light">
+                Lightning-fast turnaround time
+              </h3>
+              <p class="feature-description body--light">
                 From approval to shipping in just a few hours
               </p>
             </div>
 
             <div class="feature-item">
-              <div class="feature-icon"></div>
-              <h3 class="feature-title">The latest technology</h3>
-              <p class="feature-description">
+              <div class="feature-icon">
+                <img
+                  src="./assets/img/graphics/latest-tech.png"
+                  alt="Latest Technology"
+                />
+              </div>
+              <h3 class="feature-title headline--light">
+                The latest technology
+              </h3>
+              <p class="feature-description body--light">
                 The latest technology for applying patterns to fabric, the best
                 materials, guaranteed durability, technologically advanced
                 machinery.
@@ -260,7 +258,7 @@
           </article>
 
           <article class="card">
-            <h3>Standard <span>(Most Popular)</span></h3>
+            <h3>Standard</h3>
             <p class="pricing--highlight">$25</p>
             <ul>
               <li>Choice of prints or graphics</li>
