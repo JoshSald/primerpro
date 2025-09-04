@@ -253,8 +253,6 @@ footer .flex-container a {
   margin: var(--space-md);
 }
 
-.social-icons {
-}
 @media (min-width: 768px) {
   footer .logo {
     max-width: 20%;
