@@ -6,7 +6,7 @@
 /* FEATURES SECTION */
 /* WHY US SECTION */
 #why-us .grid-container {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 #why-us h2 {
@@ -28,13 +28,21 @@
   text-align: center;
 }
 #why-us img {
-  max-width: 60%;
+  max-width: 50%;
   margin-bottom: 0.5rem;
+}
+
+#why-us .card--why {
+  width: auto;
+  padding: var(--space-lg) var(--space-md);
 }
 
 @media (min-width: 768px) {
   #why-us img {
-    max-width: 35%;
+    max-width: 30%;
+  }
+  #why-us .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 /* PRICING SECTION */
