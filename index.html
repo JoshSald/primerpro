@@ -3,27 +3,296 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Group Project</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Evertee</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/img/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/img/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <!-- Oualid -->
-    <header><nav></nav></header>
+    <header class="bg--white">
+      <nav>
+        <ul>
+          <li>
+            <h1>
+              <a href="/" class="logo"
+                ><img src="./assets/img/logo.png" alt="Logo"
+              /></a>
+            </h1>
+          </li>
+          <li><a href="/">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><button class="btn btn-primary">Try for free</button></li>
+          <li class="desktop--hide">
+            <img
+              src="./assets/img/graphics/burger-menu.svg"
+              alt="burger menu"
+            />
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <!-- Oualid -->
-      <section id="hero"></section>
+      <section id="hero">
+        <div class="card--container">
+          <div class="badge">#1 Trending T-Shirt Brand</div>
+          <h2>
+            Wear Your Style. <br />Stand Out.<br />
+            Everyday.
+          </h2>
+          <p>
+            Premium quality cotton T-shirts, sustainably made for comfort and
+            style.
+          </p>
+          <button class="btn btn-primary">Shop Now</button>
+        </div>
+      </section>
       <!-- Oualid -->
-      <section id="trust-banner"></section>
+      <section id="trust-banner" class="bg--dark">
+        <h2 class="headline--light">Trusted by companies like</h2>
+        <div class="logos">
+          <div class="logo-item">
+            <img src="./assets/img/brands/greenpeace.svg" alt="greenpeace" />
+          </div>
+          <div class="logo-item">
+            <img
+              src="./assets/img/brands/rainforest-action-network.svg"
+              alt="Rainforest Action Network"
+            />
+          </div>
+          <div class="logo-item">
+            <img
+              src="./assets/img/brands/sea-shepherd.svg"
+              alt="Sea Shepherd"
+            />
+          </div>
+          <div class="logo-item">
+            <img
+              src="./assets/img/brands/thenorthface.svg"
+              alt="The North Face"
+            />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/img/brands/wwf.svg" alt="WWF" />
+          </div>
+        </div>
+      </section>
       <!-- Lukasz -->
-      <section id="video"></section>
-      <!-- Lukasz -->
-      <section id="features"></section>
+      <section id="video">
+        <h2 class="video-title">Check out our video:</h2>
+        <div class="video--container">
+          <video autoplay loop muted>
+            <source src="assets/video/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+      <section id="features" class="bg--dark">
+        <div class="container">
+          <h1 class="main-title headline--light">
+            Awesome features of our product
+          </h1>
+          <p class="subtitle"></p>
+
+          <div class="flex-container body">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <img
+                  src="./assets/img/graphics/unique-design.png"
+                  alt="Unique Design"
+                />
+              </div>
+              <h3 class="feature-title headline--light">Unique design</h3>
+              <p class="feature-description body--light">
+                You can choose from thousands of designs in our database or send
+                us your own design.
+              </p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <img
+                  src="./assets/img/graphics/fast.png"
+                  alt="Lightning fast turnaround"
+                />
+              </div>
+              <h3 class="feature-title headline--light">
+                Lightning-fast turnaround time
+              </h3>
+              <p class="feature-description body--light">
+                From approval to shipping in just a few hours
+              </p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <img
+                  src="./assets/img/graphics/latest-tech.png"
+                  alt="Latest Technology"
+                />
+              </div>
+              <h3 class="feature-title headline--light">
+                The latest technology
+              </h3>
+              <p class="feature-description body--light">
+                The latest technology for applying patterns to fabric, the best
+                materials, guaranteed durability, technologically advanced
+                machinery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Josh -->
-      <section id="why-us"></section>
+      <section id="why-us">
+        <h2>Why you should choose us</h2>
+        <div class="grid-container">
+          <article class="card card--why">
+            <img src="./assets/img/quality.png" alt="Premium Quality" />
+            <h3>Premium Quality, Everyday Comfort</h3>
+            <p>
+              Our tees feel like your favorite shirt on day one—and stay that
+              way after 50 washes.
+            </p>
+          </article>
+
+          <article class="card card--why">
+            <img src="./assets/img/prints.png" alt="Durable Prints" />
+            <h3>Prints That Actually Last</h3>
+            <p>
+              No peeling, no fading, no cracking. Your design outlives the
+              trend.
+            </p>
+          </article>
+
+          <article class="card card--why">
+            <img
+              src="./assets/img/sustainable.png"
+              alt="Ethical and Sustainable"
+            />
+            <h3>Ethical &amp; Sustainable</h3>
+            <p>
+              We source responsibly, so you look good and feel good about it.
+            </p>
+          </article>
+
+          <article class="card card--why">
+            <img src="./assets/img/fit.png" alt="Perfect Fit" />
+            <h3>Perfect Fit Guarantee</h3>
+            <p>
+              Too tight? Too baggy? We’ll swap it until it feels just right.
+            </p>
+          </article>
+
+          <article class="card card--why">
+            <img
+              src="./assets/img/lifestyle.png"
+              alt="Designed for Real Life"
+            />
+            <h3>Designed for Real Life</h3>
+            <p>
+              From couch lounging to late-night adventures—our shirts keep up
+              with you.
+            </p>
+          </article>
+
+          <article class="card card--why">
+            <img src="./assets/img/community.png" alt="Support a Small Brand" />
+            <h3>Small Brand, Big Love</h3>
+            <p>
+              Every order supports a growing brand that cares more about you
+              than some faceless fast-fashion giant.
+            </p>
+          </article>
+        </div>
+      </section>
       <!-- Josh -->
-      <section id="pricing"></section>
+      <section id="pricing" class="bg--dark">
+        <h2 class="headline--light">Simple Pricing, No Surprises</h2>
+        <p class="body--light">
+          Quality apparel at fair prices—choose the plan that fits your style.
+        </p>
+
+        <div class="flex-container">
+          <article class="card">
+            <h3>Basic</h3>
+            <p class="pricing--highlight">$15</p>
+            <ul>
+              <li>Classic fit</li>
+              <li>Solid colors only</li>
+              <li>Standard shipping</li>
+            </ul>
+            <button class="btn btn-primary">Choose Basic</button>
+          </article>
+
+          <article class="card">
+            <h3>Standard</h3>
+            <p class="pricing--highlight">$25</p>
+            <ul>
+              <li>Choice of prints or graphics</li>
+              <li>Multiple color options</li>
+              <li>Free shipping over $50</li>
+              <li>Easy returns</li>
+            </ul>
+            <button class="btn btn-primary">Choose Standard</button>
+          </article>
+
+          <article class="card">
+            <h3>Premium</h3>
+            <p class="pricing--highlight">$40</p>
+            <ul>
+              <li>Limited edition designs</li>
+              <li>Priority shipping included</li>
+              <li>Eco-friendly packaging</li>
+              <li>Exclusive discounts on future drops</li>
+            </ul>
+            <button class="btn btn-primary">Choose Premium</button>
+          </article>
+        </div>
+      </section>
     </main>
     <!-- Josh -->
-    <footer></footer>
+    <footer>
+      <img src="./assets/img/logo.png" alt="Evertee Logo" class="logo" />
+      <div class="flex-container">
+        <a href="/">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="flex-container social-icons">
+        <a href="#" class="fa fa-facebook fa-lg"></a
+        ><a href="#" class="fa fa-instagram fa-lg"></a
+        ><a href="#" class="fa fa-youtube fa-lg"></a
+        ><a href="#" class="fa fa-linkedin fa-lg"></a>
+      </div>
+    </footer>
   </body>
 </html>
