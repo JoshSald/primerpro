@@ -1,0 +1,23 @@
+{
+  "name": "primerpro",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for an apparel brand focused on high-quality, sustainable t-shirts.   Built with HTML, CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx tailwindcss -i ./styles/global.css -o ./src/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshSald/primerpro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshSald/primerpro/issues"
+  },
+  "homepage": "https://github.com/JoshSald/primerpro#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
