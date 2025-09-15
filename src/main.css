@@ -729,16 +729,6 @@ ol,
   display: flex;
 }
 
-.grid-container {
-  display: grid;
-}
-
-@media (min-width: 768px) {
-  .desktop--hide {
-    display: none;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -873,6 +863,18 @@ ol,
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-lg {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 1rem;
+}
+
+.mr-md {
+  margin-right: 1rem;
 }
 
 .box-border {
@@ -1322,10 +1324,6 @@ ol,
 
 .grid-flow-col-dense {
   grid-auto-flow: column dense;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-1 {
@@ -2240,14 +2238,14 @@ ol,
   color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .text-evergreen {
   --tw-text-opacity: 1;
   color: rgb(46 94 78 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -2617,6 +2615,10 @@ ol,
 }
 
 /* Base resets and element styles */
+
+footer .logo {
+  max-width: 20rem;
+}
 
 .hover\:font-bold:hover {
   font-weight: 700;
