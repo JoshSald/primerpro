@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Evertee</title>
     <link
       rel="icon"
@@ -33,6 +32,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="./src/main.css" />
   </head>
   <body>
     <!-- Oualid -->
@@ -40,7 +40,7 @@
       <nav>
         <ul>
           <li>
-            <h1>
+            <h1 class="text-evergreen">
               <a href="/" class="logo"
                 ><img src="./assets/img/logo.png" alt="Logo"
               /></a>
@@ -50,7 +50,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><button class="btn btn-primary">Try for free</button></li>
-          <li class="desktop--hide">
+          <li class="desktop: hidden">
             <img
               src="./assets/img/graphics/burger-menu.svg"
               alt="burger menu"
@@ -172,11 +172,19 @@
         </div>
       </section>
       <!-- Josh -->
-      <section id="why-us">
-        <h2>Why you should choose us</h2>
-        <div class="grid-container">
-          <article class="card card--why">
-            <img src="./assets/img/quality.png" alt="Premium Quality" />
+      <section class="p-xl" id="why-us">
+        <h2 class="font-heading text-center text-evergreen">
+          Why you should choose us
+        </h2>
+        <div
+          class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 container mx-auto"
+        >
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/quality.png"
+              alt="Premium Quality"
+            />
             <h3>Premium Quality, Everyday Comfort</h3>
             <p>
               Our tees feel like your favorite shirt on day one—and stay that
@@ -184,8 +192,12 @@
             </p>
           </article>
 
-          <article class="card card--why">
-            <img src="./assets/img/prints.png" alt="Durable Prints" />
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/prints.png"
+              alt="Durable Prints"
+            />
             <h3>Prints That Actually Last</h3>
             <p>
               No peeling, no fading, no cracking. Your design outlives the
@@ -193,8 +205,9 @@
             </p>
           </article>
 
-          <article class="card card--why">
+          <article class="card card--why text-center">
             <img
+              class="w-full desktop:w-1/2"
               src="./assets/img/sustainable.png"
               alt="Ethical and Sustainable"
             />
@@ -204,16 +217,21 @@
             </p>
           </article>
 
-          <article class="card card--why">
-            <img src="./assets/img/fit.png" alt="Perfect Fit" />
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/fit.png"
+              alt="Perfect Fit"
+            />
             <h3>Perfect Fit Guarantee</h3>
             <p>
               Too tight? Too baggy? We’ll swap it until it feels just right.
             </p>
           </article>
 
-          <article class="card card--why">
+          <article class="card card--why text-center">
             <img
+              class="w-full desktop:w-1/2"
               src="./assets/img/lifestyle.png"
               alt="Designed for Real Life"
             />
@@ -224,8 +242,12 @@
             </p>
           </article>
 
-          <article class="card card--why">
-            <img src="./assets/img/community.png" alt="Support a Small Brand" />
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/community.png"
+              alt="Support a Small Brand"
+            />
             <h3>Small Brand, Big Love</h3>
             <p>
               Every order supports a growing brand that cares more about you
@@ -235,13 +257,13 @@
         </div>
       </section>
       <!-- Josh -->
-      <section id="pricing" class="bg--dark">
-        <h2 class="headline--light">Simple Pricing, No Surprises</h2>
+      <section id="pricing" class="p-lg bg-gray">
+        <h2 class="text-white text-center">Simple Pricing, No Surprises</h2>
         <p class="body--light">
           Quality apparel at fair prices—choose the plan that fits your style.
         </p>
 
-        <div class="flex-container">
+        <div class="flex flex-col desktop:flex-row justify-center">
           <article class="card">
             <h3>Basic</h3>
             <p class="pricing--highlight">$15</p>
