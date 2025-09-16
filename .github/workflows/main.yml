@@ -1,102 +1,46 @@
-name: Auto PR develop → main (5m delay, with bypass)
+name: Auto PR develop → main
 
 on:
   push:
     branches:
       - develop
-  workflow_dispatch:
-    inputs:
-      bypass_delay:
-        description: 'Skip the wait? (true/false)'
-        required: false
-        default: 'false'
 
 permissions:
   contents: read
   pull-requests: write
 
 jobs:
-  create-pr:
+  sync-develop-to-main:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout develop
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: develop
 
-      - name: Determine bypass decision
-        id: bypass
-        run: |
-          set -euo pipefail
-
-          BYPASS="false"
-
-          # 1) Manual dispatch input
-          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
-            INPUT_BYPASS="${{ github.event.inputs.bypass_delay || 'false' }}"
-            if [ "$INPUT_BYPASS" = "true" ] || [ "$INPUT_BYPASS" = "1" ]; then
-              echo "Manual dispatch asked to bypass delay."
-              BYPASS="true"
-            fi
-          fi
-
-          # 2) Commit message token
-          COMMIT_MSG=$(git log -1 --pretty=%B || echo "")
-          if echo "$COMMIT_MSG" | grep -iq '\[bypass\]\|\[skip-delay\]\|\[now\]'; then
-            echo "Commit message contains bypass token."
-            BYPASS="true"
-          fi
-
-          # 3) Actor allowlist (secret BYPASS_USERS = "alice,bob,my-bot")
-          if [ -n "${{ secrets.BYPASS_USERS || '' }}" ]; then
-            ACTOR="${{ github.actor }}"
-            IFS=',' read -ra ALIST <<< "${{ secrets.BYPASS_USERS }}"
-            for u in "${ALIST[@]}"; do
-              if [ "$u" = "$ACTOR" ]; then
-                echo "Actor $ACTOR is in bypass allowlist."
-                BYPASS="true"
-                break
-              fi
-            done
-          fi
-
-          echo "bypass=$BYPASS" >> $GITHUB_OUTPUT
-
-      - name: Sleep unless bypassed
-        if: steps.bypass.outputs.bypass != 'true'
-        run: |
-          echo "No bypass flagged. Sleeping 5 minutes..."
-          sleep 300  # 300 seconds = 5 minutes
-
       - name: Fetch main for comparison
-        run: git fetch origin main:refs/remotes/origin/main
+        run: git fetch origin main
 
-      - name: Exit if develop and main are identical
-        id: check_diff
+      - name: Check if there are changes between develop and main
+        id: diff
         run: |
-          DEV_SHA=$(git rev-parse origin/develop)
-          MAIN_SHA=$(git rev-parse origin/main)
-          if [ "$DEV_SHA" = "$MAIN_SHA" ]; then
+          if git diff --quiet origin/main HEAD; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes to merge. Exiting."
-            exit 0
           else
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create PR from develop -> main
-        if: steps.check_diff.outputs.changed == 'true'
+      - name: Create or update PR develop → main
+        if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: auto PR develop → main"
-          title: "Auto-merge: develop → main"
-          body: |
-            This pull request was automatically created by the CI to merge the latest `develop` into `main`.
-            It will be auto-merged when required checks pass.
-          base: main
-          branch: develop
+          base: main               # <- PR target
+          branch: auto/develop-to-main # <- PR source branch (bot branch, not develop itself)
+          title: "Auto-merge develop → main"
+          body: "This PR was auto-created to merge the latest \`develop\` into \`main\`."
+          commit-message: "chore: sync develop → main"
           labels: automated
           auto-merge: true
           merge-method: merge
