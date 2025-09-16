@@ -11,17 +11,26 @@ jobs:
 
     steps:
       - name: Wait 15 minutes
-        run: sleep 900 # 900 seconds = 15 minutes
+        run: sleep 900 # 15 minutes
+
+      - name: Generate token from GitHub App
+        id: app-token
+        uses: tibdex/github-app-token@v2
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+          installation_id: ${{ secrets.APP_INSTALLATION_ID }}
 
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Configure git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "Mergebot[bot]"
+          git config user.email "Mergebot[bot]@users.noreply.github.com"
 
       - name: Merge develop into main
         run: |
@@ -29,3 +38,5 @@ jobs:
           git checkout main
           git merge origin/develop --no-edit
           git push origin main
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
