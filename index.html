@@ -61,18 +61,38 @@
     </header>
     <main>
       <!-- Oualid -->
-      <section id="hero">
-        <div class="card--container">
-          <div class="badge">#1 Trending T-Shirt Brand</div>
-          <h2>
+      <section
+        id="hero"
+        class="relative h-screen flex justify-center desktop:justify-start items-center bg-[url(/assets/img/hero-bg.jpg)] bg-cover"
+      >
+        <video
+          class="z-1 hidden absolute w-auto min-w-full min-h-full max-w-none aspect-video desktop:block"
+          autoplay
+          loop
+          muted
+        >
+          <source src="assets/video/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div
+          class="card relative desktop:max-w-1/2 z-10 bg-white/40 backdrop-blur-2xl desktop:ml-xl items-start py-20 px-10"
+        >
+          <div class="badge text-pine">#1 Trending T-Shirt Brand</div>
+          <h2
+            class="desktop:text-5xl text-left tracking-wide leading-normal desktop:leading-relaxed font-normal"
+          >
             Wear Your Style. <br />Stand Out.<br />
             Everyday.
           </h2>
-          <p>
+          <p class="mb-lg desktop:text-base">
             Premium quality cotton T-shirts, sustainably made for comfort and
             style.
           </p>
-          <button class="btn btn-primary">Shop Now</button>
+          <button
+            class="btn btn-primary self-center desktop:w-full desktop:h-16"
+          >
+            Shop Now
+          </button>
         </div>
       </section>
       <!-- Oualid -->
@@ -103,16 +123,6 @@
           <div class="logo-item">
             <img src="./assets/img/brands/wwf.svg" alt="WWF" />
           </div>
-        </div>
-      </section>
-      <!-- Lukasz -->
-      <section id="video">
-        <h2 class="video-title">Check out our video:</h2>
-        <div class="video--container">
-          <video autoplay loop muted>
-            <source src="assets/video/video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
         </div>
       </section>
       <section id="features" class="bg--dark">
