@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Evertee</title>
     <link
       rel="icon"
@@ -33,6 +32,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="./src/main.css" />
   </head>
   <body>
     <!-- Oualid -->
@@ -40,7 +40,7 @@
       <nav>
         <ul>
           <li>
-            <h1>
+            <h1 class="text-evergreen">
               <a href="/" class="logo"
                 ><img src="./assets/img/logo.png" alt="Logo"
               /></a>
@@ -50,7 +50,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><button class="btn btn-primary">Try for free</button></li>
-          <li class="desktop--hide">
+          <li class="desktop: hidden">
             <img
               src="./assets/img/graphics/burger-menu.svg"
               alt="burger menu"
@@ -61,18 +61,38 @@
     </header>
     <main>
       <!-- Oualid -->
-      <section id="hero">
-        <div class="card--container">
-          <div class="badge">#1 Trending T-Shirt Brand</div>
-          <h2>
+      <section
+        id="hero"
+        class="relative h-screen flex justify-center desktop:justify-start items-center bg-[url(/assets/img/hero-bg.jpg)] bg-cover overflow-hidden"
+      >
+        <video
+          class="z-1 hidden absolute w-auto min-w-full min-h-full max-w-none aspect-video desktop:block"
+          autoplay
+          loop
+          muted
+        >
+          <source src="assets/video/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div
+          class="card relative desktop:max-w-1/2 z-10 bg-white/40 backdrop-blur-2xl desktop:ml-xl items-start py-20 px-10"
+        >
+          <div class="badge text-pine">#1 Trending T-Shirt Brand</div>
+          <h2
+            class="desktop:text-5xl text-left tracking-wide leading-normal desktop:leading-relaxed font-normal"
+          >
             Wear Your Style. <br />Stand Out.<br />
             Everyday.
           </h2>
-          <p>
+          <p class="mb-lg desktop:text-base">
             Premium quality cotton T-shirts, sustainably made for comfort and
             style.
           </p>
-          <button class="btn btn-primary">Shop Now</button>
+          <button
+            class="btn btn-primary self-center desktop:w-full desktop:h-16"
+          >
+            Shop Now
+          </button>
         </div>
       </section>
       <!-- Oualid -->
@@ -103,16 +123,6 @@
           <div class="logo-item">
             <img src="./assets/img/brands/wwf.svg" alt="WWF" />
           </div>
-        </div>
-      </section>
-      <!-- Lukasz -->
-      <section id="video">
-        <h2 class="video-title">Check out our video:</h2>
-        <div class="video--container">
-          <video autoplay loop muted>
-            <source src="assets/video/video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
         </div>
       </section>
       <section id="features" class="bg--dark">
@@ -172,11 +182,19 @@
         </div>
       </section>
       <!-- Josh -->
-      <section id="why-us">
-        <h2>Why you should choose us</h2>
-        <div class="grid-container">
-          <article class="card card--why">
-            <img src="./assets/img/quality.png" alt="Premium Quality" />
+      <section class="p-xl" id="why-us">
+        <h2 class="font-heading text-center text-evergreen">
+          Why you should choose us
+        </h2>
+        <div
+          class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 container mx-auto"
+        >
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/quality.png"
+              alt="Premium Quality"
+            />
             <h3>Premium Quality, Everyday Comfort</h3>
             <p>
               Our tees feel like your favorite shirt on day one—and stay that
@@ -184,8 +202,12 @@
             </p>
           </article>
 
-          <article class="card card--why">
-            <img src="./assets/img/prints.png" alt="Durable Prints" />
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/prints.png"
+              alt="Durable Prints"
+            />
             <h3>Prints That Actually Last</h3>
             <p>
               No peeling, no fading, no cracking. Your design outlives the
@@ -193,8 +215,9 @@
             </p>
           </article>
 
-          <article class="card card--why">
+          <article class="card card--why text-center">
             <img
+              class="w-full desktop:w-1/2"
               src="./assets/img/sustainable.png"
               alt="Ethical and Sustainable"
             />
@@ -204,16 +227,21 @@
             </p>
           </article>
 
-          <article class="card card--why">
-            <img src="./assets/img/fit.png" alt="Perfect Fit" />
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/fit.png"
+              alt="Perfect Fit"
+            />
             <h3>Perfect Fit Guarantee</h3>
             <p>
               Too tight? Too baggy? We’ll swap it until it feels just right.
             </p>
           </article>
 
-          <article class="card card--why">
+          <article class="card card--why text-center">
             <img
+              class="w-full desktop:w-1/2"
               src="./assets/img/lifestyle.png"
               alt="Designed for Real Life"
             />
@@ -224,8 +252,12 @@
             </p>
           </article>
 
-          <article class="card card--why">
-            <img src="./assets/img/community.png" alt="Support a Small Brand" />
+          <article class="card card--why text-center">
+            <img
+              class="w-full desktop:w-1/2"
+              src="./assets/img/community.png"
+              alt="Support a Small Brand"
+            />
             <h3>Small Brand, Big Love</h3>
             <p>
               Every order supports a growing brand that cares more about you
@@ -235,17 +267,17 @@
         </div>
       </section>
       <!-- Josh -->
-      <section id="pricing" class="bg--dark">
-        <h2 class="headline--light">Simple Pricing, No Surprises</h2>
+      <section id="pricing" class="p-lg bg-gray">
+        <h2 class="text-white text-center">Simple Pricing, No Surprises</h2>
         <p class="body--light">
           Quality apparel at fair prices—choose the plan that fits your style.
         </p>
 
-        <div class="flex-container">
+        <div class="flex flex-col tablet:flex-row justify-center">
           <article class="card">
             <h3>Basic</h3>
             <p class="pricing--highlight">$15</p>
-            <ul>
+            <ul class="list-image-[url(/assets/img/icons/pine.svg)]">
               <li>Classic fit</li>
               <li>Solid colors only</li>
               <li>Standard shipping</li>
@@ -256,7 +288,7 @@
           <article class="card">
             <h3>Standard</h3>
             <p class="pricing--highlight">$25</p>
-            <ul>
+            <ul class="list-image-[url(/assets/img/icons/pine.svg)]">
               <li>Choice of prints or graphics</li>
               <li>Multiple color options</li>
               <li>Free shipping over $50</li>
@@ -268,7 +300,7 @@
           <article class="card">
             <h3>Premium</h3>
             <p class="pricing--highlight">$40</p>
-            <ul>
+            <ul class="list-image-[url(/assets/img/icons/pine.svg)]">
               <li>Limited edition designs</li>
               <li>Priority shipping included</li>
               <li>Eco-friendly packaging</li>
@@ -280,18 +312,18 @@
       </section>
     </main>
     <!-- Josh -->
-    <footer>
-      <img src="./assets/img/logo.png" alt="Evertee Logo" class="logo" />
-      <div class="flex-container">
-        <a href="/">Home</a>
-        <a href="#features">Features</a>
+    <footer class="flex flex-col justify-center items-center p-xl">
+      <img src="./assets/img/logo.png" alt="Evertee Logo" class="logo mb-lg" />
+      <div class="flex mb-md">
+        <a class="mr-md" href="/">Home</a>
+        <a class="mr-md" href="#features">Features</a>
         <a href="#pricing">Pricing</a>
       </div>
       <div class="flex-container social-icons">
-        <a href="#" class="fa fa-facebook fa-lg"></a
-        ><a href="#" class="fa fa-instagram fa-lg"></a
-        ><a href="#" class="fa fa-youtube fa-lg"></a
-        ><a href="#" class="fa fa-linkedin fa-lg"></a>
+        <a href="#" class="fa fa-facebook fa-lg mr-md"></a
+        ><a href="#" class="fa fa-instagram fa-lg mr-md"></a
+        ><a href="#" class="fa fa-youtube fa-lg mr-md"></a
+        ><a href="#" class="fa fa-linkedin fa-lg mr-md"></a>
       </div>
     </footer>
   </body>

@@ -76,3 +76,6 @@
     @apply tablet:hidden;
   }
 }
+footer .logo {
+  max-width: 20rem;
+}
