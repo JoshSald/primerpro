@@ -39,7 +39,7 @@ jobs:
           base: main               # <- PR target
           branch: auto/develop-to-main # <- PR source branch (bot branch, not develop itself)
           title: "Auto-merge develop → main"
-          body: "This PR was auto-created to merge the latest \`develop\` into \`main\`."
+          body: "This PR was auto-created to merge the latest `develop` into `main`"
           commit-message: "chore: sync develop → main"
           labels: automated
           auto-merge: true
