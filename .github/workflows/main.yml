@@ -36,10 +36,12 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          base: main               # <- PR target
-          branch: auto/develop-to-main # <- PR source branch (bot branch, not develop itself)
-          title: "Auto-merge develop → main"
-          body: "This PR was auto-created to merge the latest `develop` into `main`"
+          base: main
+          branch: auto/develop-to-main   # <--- consistent branch for rolling PR
+          title: "Sync develop → main"
+          body: |
+            This pull request was automatically created to merge the latest `develop` into `main`.
+            It will auto-update whenever `develop` changes.
           commit-message: "chore: sync develop → main"
           labels: automated
           auto-merge: true
