@@ -2364,6 +2364,16 @@ ol,
   padding-right: 4rem;
 }
 
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.px-72 {
+  padding-left: 18rem;
+  padding-right: 18rem;
+}
+
 .text-left {
   text-align: left;
 }
