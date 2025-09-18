@@ -36,25 +36,26 @@
   </head>
   <body>
     <!-- Oualid -->
-    <header class="bg--white">
-      <nav>
-        <ul>
-          <li>
+    <header class="p-0 m-0">
+      <nav class="bg-white w-full p-0 m-0 fixed z-50 shadow-md">
+        <ul
+          class="px-xl flex flex-col desktop:flex-row desktop:justify-between items-center mb-0"
+        >
+          <li class="">
             <h1 class="text-evergreen">
               <a href="/" class="logo"
-                ><img src="./assets/img/logo.png" alt="Logo"
+                ><img
+                  class="w-40 desktop:w-28"
+                  src="./assets/img/logo.png"
+                  alt="Logo"
               /></a>
             </h1>
           </li>
-          <li><a href="/">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><button class="btn btn-primary">Try for free</button></li>
-          <li class="desktop: hidden">
-            <img
-              src="./assets/img/graphics/burger-menu.svg"
-              alt="burger menu"
-            />
+          <li class="mb-md desktop:mb-0 flex items-center gap-md">
+            <a lass="mx-lg font-medium" href="/">Home</a>
+            <a lass="mx-lg font-medium" href="#features">Features</a>
+            <a lass="mx-lg font-medium" href="#pricing">Pricing</a>
+            <button class="btn btn-primary">Try for free</button>
           </li>
         </ul>
       </nav>
@@ -96,88 +97,100 @@
         </div>
       </section>
       <!-- Oualid -->
-      <section id="trust-banner" class="bg--dark">
-        <h2 class="headline--light">Trusted by companies like</h2>
-        <div class="logos">
-          <div class="logo-item">
-            <img src="./assets/img/brands/greenpeace.svg" alt="greenpeace" />
-          </div>
-          <div class="logo-item">
+      <section id="trust-banner" class="bg-gray p-xl">
+        <h2 class="mt-0 text-white text-center desktop:mb-xl">
+          Trusted by companies like
+        </h2>
+        <div class="logos flex flex-wrap items-center justify-center">
+          <div class="logo-item m-md desktop:m-xl">
             <img
+              class="max-w-32 desktop:max-h-32"
+              src="./assets/img/brands/greenpeace.svg"
+              alt="greenpeace"
+            />
+          </div>
+          <div class="logo-item m-md desktop:m-xl">
+            <img
+              class="max-w-32 desktop:max-h-32"
               src="./assets/img/brands/rainforest-action-network.svg"
               alt="Rainforest Action Network"
             />
           </div>
-          <div class="logo-item">
+          <div class="logo-item m-md desktop:m-xl">
             <img
+              class="max-w-32 desktop:max-h-32"
               src="./assets/img/brands/sea-shepherd.svg"
               alt="Sea Shepherd"
             />
           </div>
-          <div class="logo-item">
+          <div class="logo-item m-md desktop:m-xl">
             <img
-              src="./assets/img/brands/thenorthface.svg"
-              alt="The North Face"
+              class="max-w-32 desktop:max-h-32"
+              src="./assets/img/brands/wwf.svg"
+              alt="WWF"
             />
-          </div>
-          <div class="logo-item">
-            <img src="./assets/img/brands/wwf.svg" alt="WWF" />
           </div>
         </div>
       </section>
-      <section id="features" class="bg--dark">
-        <div class="container">
-          <h1 class="main-title headline--light">
-            Awesome features of our product
-          </h1>
-          <p class="subtitle"></p>
+      <section id="features" class="bg-white p-xl">
+        <h2 class="text-center mt-0 desktop:mb-xl">
+          Awesome features of our product
+        </h2>
 
-          <div class="flex-container body">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <img
-                  src="./assets/img/graphics/unique-design.png"
-                  alt="Unique Design"
-                />
-              </div>
-              <h3 class="feature-title headline--light">Unique design</h3>
-              <p class="feature-description body--light">
-                You can choose from thousands of designs in our database or send
-                us your own design.
-              </p>
+        <div
+          class="flex flex-col desktop:flex-row items-center justify-center w-full desktop:px-xl desktop:mb-xl"
+        >
+          <div
+            class="feature-item flex flex-col items-center justify-center text-center flex-1"
+          >
+            <div class="feature-icon">
+              <img
+                class="w-32 mx-auto"
+                src="./assets/img/graphics/unique-design.png"
+                alt="Unique Design"
+              />
             </div>
+            <h3 class="feature-title headline--light">Unique design</h3>
+            <p class="feature-description body--light">
+              You can choose from thousands of designs in our database or send
+              us your own design.
+            </p>
+          </div>
 
-            <div class="feature-item">
-              <div class="feature-icon">
-                <img
-                  src="./assets/img/graphics/fast.png"
-                  alt="Lightning fast turnaround"
-                />
-              </div>
-              <h3 class="feature-title headline--light">
-                Lightning-fast turnaround time
-              </h3>
-              <p class="feature-description body--light">
-                From approval to shipping in just a few hours
-              </p>
+          <div
+            class="feature-item flex flex-col items-center justify-center text-center flex-1"
+          >
+            <div class="feature-icon">
+              <img
+                class="w-32 mx-auto"
+                src="./assets/img/graphics/fast.png"
+                alt="Lightning fast turnaround"
+              />
             </div>
+            <h3 class="feature-title headline--light">
+              Lightning-fast turnaround time
+            </h3>
+            <p class="feature-description body--light">
+              From approval to shipping in just a few hours
+            </p>
+          </div>
 
-            <div class="feature-item">
-              <div class="feature-icon">
-                <img
-                  src="./assets/img/graphics/latest-tech.png"
-                  alt="Latest Technology"
-                />
-              </div>
-              <h3 class="feature-title headline--light">
-                The latest technology
-              </h3>
-              <p class="feature-description body--light">
-                The latest technology for applying patterns to fabric, the best
-                materials, guaranteed durability, technologically advanced
-                machinery.
-              </p>
+          <div
+            class="feature-item flex flex-col items-center justify-center text-center flex-1"
+          >
+            <div class="feature-icon">
+              <img
+                class="w-32 mx-auto"
+                src="./assets/img/graphics/latest-tech.png"
+                alt="Latest Technology"
+              />
             </div>
+            <h3 class="feature-title headline--light">The latest technology</h3>
+            <p class="feature-description body--light">
+              The latest technology for applying patterns to fabric, the best
+              materials, guaranteed durability, technologically advanced
+              machinery.
+            </p>
           </div>
         </div>
       </section>
