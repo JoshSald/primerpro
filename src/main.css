@@ -1171,6 +1171,10 @@ ol,
   max-width: 8rem;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -3115,6 +3119,11 @@ footer .logo {
 
   .desktop\:bg-transparent {
     background-color: transparent;
+  }
+
+  .desktop\:px-xl {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .desktop\:text-5xl {
