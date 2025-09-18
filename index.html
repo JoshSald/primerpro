@@ -36,25 +36,26 @@
   </head>
   <body>
     <!-- Oualid -->
-    <header class="bg--white">
-      <nav>
-        <ul>
-          <li>
+    <header class="p-0 m-0">
+      <nav class="bg-white w-full p-0 m-0 fixed z-50 shadow-md">
+        <ul
+          class="px-xl flex flex-col desktop:flex-row desktop:justify-between items-center mb-0"
+        >
+          <li class="">
             <h1 class="text-evergreen">
               <a href="/" class="logo"
-                ><img src="./assets/img/logo.png" alt="Logo"
+                ><img
+                  class="w-40 desktop:w-28"
+                  src="./assets/img/logo.png"
+                  alt="Logo"
               /></a>
             </h1>
           </li>
-          <li><a href="/">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><button class="btn btn-primary">Try for free</button></li>
-          <li class="desktop: hidden">
-            <img
-              src="./assets/img/graphics/burger-menu.svg"
-              alt="burger menu"
-            />
+          <li class="mb-md desktop:mb-0 flex items-center gap-md">
+            <a lass="mx-lg font-medium" href="/">Home</a>
+            <a lass="mx-lg font-medium" href="#features">Features</a>
+            <a lass="mx-lg font-medium" href="#pricing">Pricing</a>
+            <button class="btn btn-primary">Try for free</button>
           </li>
         </ul>
       </nav>
