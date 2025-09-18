@@ -872,6 +872,14 @@ ol,
   margin: 0px;
 }
 
+.m-lg {
+  margin: 2rem;
+}
+
+.m-md {
+  margin: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -880,6 +888,16 @@ ol,
 .mx-lg {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.mx-md {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-xl {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .mb-lg {
@@ -908,6 +926,10 @@ ol,
 
 .mr-xl {
   margin-right: 4rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .box-border {
@@ -1021,8 +1043,36 @@ ol,
   height: 100%;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
 .max-h-\[121px\] {
   max-height: 121px;
+}
+
+.max-h-32 {
+  max-height: 8rem;
+}
+
+.max-h-16 {
+  max-height: 4rem;
+}
+
+.max-h-20 {
+  max-height: 5rem;
+}
+
+.max-h-24 {
+  max-height: 6rem;
+}
+
+.max-h-full {
+  max-height: 100%;
 }
 
 .min-h-full {
@@ -1115,6 +1165,10 @@ ol,
 
 .max-w-none {
   max-width: none;
+}
+
+.max-w-32 {
+  max-width: 8rem;
 }
 
 .flex-shrink {
@@ -1653,6 +1707,14 @@ ol,
 
 .gap-md {
   gap: 1rem;
+}
+
+.gap-xl {
+  gap: 4rem;
+}
+
+.gap-lg {
+  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2247,6 +2309,10 @@ ol,
 
 .p-0 {
   padding: 0px;
+}
+
+.p-md {
+  padding: 1rem;
 }
 
 .px-1 {
@@ -2905,6 +2971,10 @@ footer .logo {
 }
 
 @media (min-width: 768px) {
+  .tablet\:m-lg {
+    margin: 2rem;
+  }
+
   .tablet\:hidden {
     display: none;
   }
@@ -2927,9 +2997,27 @@ footer .logo {
 }
 
 @media (min-width: 1248px) {
+  .desktop\:m-lg {
+    margin: 2rem;
+  }
+
+  .desktop\:m-xl {
+    margin: 4rem;
+  }
+
   .desktop\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .desktop\:mx-xl {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .desktop\:mx-lg {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .desktop\:ml-xl {
@@ -2938,6 +3026,18 @@ footer .logo {
 
   .desktop\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .desktop\:mb-lg {
+    margin-bottom: 2rem;
+  }
+
+  .desktop\:mb-xl {
+    margin-bottom: 4rem;
+  }
+
+  .desktop\:ml-lg {
+    margin-left: 2rem;
   }
 
   .desktop\:block {
@@ -2954,6 +3054,10 @@ footer .logo {
 
   .desktop\:h-auto {
     height: auto;
+  }
+
+  .desktop\:max-h-32 {
+    max-height: 8rem;
   }
 
   .desktop\:w-1\/2 {
