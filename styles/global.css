@@ -1,245 +1,81 @@
-/* ==============================
-   Reset
-   ============================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-img {
-  max-width: 100%;
-}
-video {
-  aspect-ratio: 16/9;
-}
-/* ==============================
-   Evertee Pattern Library
-   ============================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  /* Color Palette */
-  --color-evergreen: #2e5e4e;
-  --color-moss: #7ca982;
-  --color-beige: #f5f2e7;
-  --color-gray: #4a4a4a;
-  --color-pine: #2b7a78;
-  --color-white: #ffffff;
-
-  /* Typography */
-  --font-heading: "Montserrat", "Poppins", "Inter", sans-serif;
-  --font-body: "Lato", "Nunito", "Open Sans", sans-serif;
-
-  /* Font Sizes (mobile) */
-  --fs-h1: 2rem; /* 32px */
-  --fs-h2: 1.5rem; /* 24px */
-  --fs-h3: 1.25rem; /* 20px */
-  --fs-body: 1rem; /* 16px */
-  --fs-small: 0.875rem; /* 14px */
-
-  /* Responsive scale (desktop) */
-  @media (min-width: 768px) {
-    --fs-h1: 3rem; /* 48px */
-    --fs-h2: 2.25rem; /* 36px */
-    --fs-h3: 1.75rem; /* 28px */
-    --fs-body: 1.125rem; /* 18px */
+/* Base resets and element styles */
+@layer base {
+  * {
+    @apply m-0 p-0 box-border scroll-smooth;
+  }
+  img {
+    @apply max-w-full;
+  }
+  video {
+    aspect-ratio: 16 / 9;
+  }
+  body {
+    @apply font-body text-body text-gray bg-beige leading-relaxed;
+  }
+  h1 {
+    @apply font-heading font-semibold text-h1 text-evergreen my-md leading-tight;
+  }
+  h2 {
+    @apply font-heading font-semibold text-h2 text-evergreen my-md leading-snug;
+  }
+  h3 {
+    @apply font-heading font-semibold text-h3 text-gray my-md leading-snug;
+  }
+  p {
+    @apply mb-md text-gray;
+  }
+  a {
+    @apply text-gray no-underline transition-colors duration-200;
+  }
+  a:hover {
+    @apply text-pine underline;
+  }
+  ol,
+  ul {
+    @apply list-none mb-md;
   }
 
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 24px;
-
-  /* Spacing Scale */
-  --space-xs: 0.25rem; /* 4px */
-  --space-sm: 0.5rem; /* 8px */
-  --space-md: 1rem; /* 16px */
-  --space-lg: 2rem; /* 32px */
-  --space-xl: 4rem; /* 64px */
+  @screen tablet {
+    h1 {
+      font-size: 3rem;
+    } /* 48px */
+    h2 {
+      font-size: 2.25rem;
+    } /* 36px */
+    h3 {
+      font-size: 1.75rem;
+    } /* 28px */
+    p {
+      font-size: 1.125rem;
+    } /* 18px */
+  }
 }
-
-/* ==============================
-   Typography
-   ============================== */
-
-body {
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  color: var(--color-gray);
-  background-color: var(--color-beige);
-  line-height: 1.6;
-  margin: 0;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  margin: var(--space-md) 0 var(--space-lg);
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: var(--fs-h1);
-  color: var(--color-evergreen);
-}
-h2 {
-  font-size: var(--fs-h2);
-  color: var(--color-evergreen);
-}
-h3 {
-  font-size: var(--fs-h3);
-  color: var(--color-gray);
-}
-
-p {
-  margin: 0 0 var(--space-md);
-  color: var(--color-gray);
-}
-
-.headline--light {
-  color: var(--color-white);
-}
-.body--light {
-  color: var(--color-white);
-}
-.body--highlight {
-  color: var(--color-pine);
-}
-/* ==============================
-   Sections
-   ============================== */
-section {
-  padding: var(--space-lg) 15%;
-}
-footer {
-  padding: 178px 30%;
-}
-
-.bg--dark {
-  background-color: var(--color-gray);
-}
-.bg--light {
-  background-color: var(--color-beige);
-}
-.bg--white {
-  background-color: var(--color-white);
-}
-/* ==============================
-   Buttons
-   ============================== */
-
-button,
-.btn {
-  display: inline-block;
-  padding: var(--space-md);
-  font-family: var(--font-heading);
-  font-size: var(--fs-body);
-  font-weight: 600;
-  border: none;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--color-evergreen);
-  color: var(--color-white);
-}
-
-.btn-primary:hover {
-  background-color: var(--color-pine);
-}
-
-@media (min-width: 768px) {
+@layer components {
   .btn {
-    padding: var(--space-md) var(--space-lg);
+    @apply inline-block px-md py-sm font-heading text-body font-semibold rounded-md cursor-pointer transition-colors;
   }
-}
+  .btn-primary {
+    @apply bg-evergreen text-white hover:bg-pine;
+  }
 
-/* ==============================
-   Cards
-   ============================== */
+  .card {
+    @apply bg-white rounded-lg p-lg shadow-card m-md flex flex-col items-center justify-around;
+  }
 
-.card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-/* ==============================
-   Inputs
-   ============================== */
-
-input,
-textarea,
-select {
-  width: 100%;
-  padding: var(--space-sm);
-  border: 1px solid #ccc;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--color-pine);
-  box-shadow: 0 0 0 2px rgba(43, 122, 120, 0.2);
-}
-
-/* ==============================
-   Links
-   ============================== */
-
-a {
-  color: var(--color-gray);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--color-pine);
-  text-decoration: underline;
-}
-
-/* ==============================
-   Containers
-   ============================== */
-
-.flex-container {
-  display: flex;
-}
-
-.grid-container {
-  display: grid;
-}
-
-/* ==============================
-   Lists
-   ============================== */
-ol,
-ul {
-  list-style-type: none;
-  margin-bottom: var(--space-md);
-}
-ul li::before {
-  content: url("../assets/img/icons/pine.svg");
-  margin-right: var(--space-xs);
-}
-
-@media (min-width: 768px) {
+  .flex-container {
+    @apply flex;
+  }
+  .grid-container {
+    @apply grid;
+  }
   .desktop--hide {
-    display: none;
+    @apply tablet:hidden;
   }
+}
+footer .logo {
+  max-width: 20rem;
 }
